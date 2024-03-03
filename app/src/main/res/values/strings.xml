@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ShelfIQ</string>
+    <string name="select_type">Your String Here</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string-array name="type_options">
+        <item>Manager</item>
+        <item>Staff</item>
+
+    </string-array>
+</resources>

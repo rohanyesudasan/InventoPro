@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg6"
+    android:padding="60dp"
+    tools:context=".frgpass">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="192dp"
+        android:layout_height="187dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintBottom_toTopOf="@id/textViewForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FORGOT PASSWORD"
+        android:textColor="#737661"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
+        app:layout_constraintBottom_toTopOf="@id/tvphoneNumber"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/tvphoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:textColorHint="@color/purple_500"
+        android:hint="Phone Number"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewForgotPassword"
+        app:layout_constraintBottom_toTopOf="@id/btnreq">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/mobile" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnreq"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="REQUEST"
+        app:cornerRadius="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvphoneNumber"
+        app:layout_constraintBottom_toTopOf="@id/textViewBackToLogin"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewBackToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnreq"
+        android:text="Back to login"
+        android:textColor="#737661"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnreq"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

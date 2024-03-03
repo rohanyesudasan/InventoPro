@@ -1,0 +1,87 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuProfile"
+        android:title="Profile"
+        android:icon="@drawable/person" />
+
+    <!-- Purchase -->
+    <item
+        android:id="@+id/menuPurchase"
+        android:title="Purchase">
+
+        <menu>
+            <item
+                android:id="@+id/menuPurchaseInsert"
+                android:title="Insert"
+                android:icon="@drawable/insert" /> <!-- Add icon for Purchase Insert -->
+
+            <item
+                android:id="@+id/menuPurchaseView"
+                android:title="View"
+                android:icon="@drawable/view" /> <!-- Add icon for Purchase View -->
+        </menu>
+
+    </item>
+
+    <!-- Sales -->
+    <item
+        android:id="@+id/menuSales"
+        android:title="Sales">
+
+        <menu>
+            <item
+                android:id="@+id/menuSalesInsert"
+                android:title="Insert"
+                android:icon="@drawable/insert" /> <!-- Add icon for Sales Insert -->
+
+            <item
+                android:id="@+id/menuSalesView"
+                android:title="View"
+                android:icon="@drawable/view" /> <!-- Add icon for Sales View -->
+        </menu>
+
+    </item>
+
+    <!-- Customers -->
+    <item
+        android:id="@+id/menuCustomers"
+        android:title="Customers">
+
+        <menu>
+            <item
+                android:id="@+id/menuCustomersInsert"
+                android:title="Insert"
+                android:icon="@drawable/insert" /> <!-- Add icon for Customers Insert -->
+
+            <item
+                android:id="@+id/menuCustomersView"
+                android:title="View"
+                android:icon="@drawable/view" /> <!-- Add icon for Customers View -->
+        </menu>
+
+    </item>
+
+    <!-- Supplier -->
+    <item
+        android:id="@+id/menuSupplier"
+        android:title="Supplier">
+
+        <menu>
+            <item
+                android:id="@+id/menuSupplierInsert"
+                android:title="Insert"
+                android:icon="@drawable/insert" /> <!-- Add icon for Supplier Insert -->
+
+            <item
+                android:id="@+id/menuSupplierView"
+                android:title="View"
+                android:icon="@drawable/view" /> <!-- Add icon for Supplier View -->
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/menuLogout"
+        android:title="Logout" />
+
+</menu>

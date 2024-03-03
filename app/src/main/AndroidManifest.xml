@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:label="InventoPro"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".resetpswd"
+            android:exported="false" />
+        <activity
+            android:name=".update_supplier"
+            android:exported="false"
+            android:label="Update Supplier" />
+        <activity
+            android:name=".frgpass"
+            android:exported="false" />
+        <activity
+            android:name=".customer_list"
+            android:exported="false"
+            android:label="Customer List" />
+        <activity
+            android:name=".updatecustomer"
+            android:exported="false"
+            android:label="Update Customer" />
+        <activity
+            android:name=".staffdashboard"
+            android:exported="false"
+            android:label="InventoPro" />
+        <activity
+            android:name=".Supplierlist"
+            android:exported="false"
+            android:label="Supplier List" />
+        <activity
+            android:name=".managerdashboard"
+            android:exported="false" />
+        <activity
+            android:name=".addsupplier"
+            android:exported="false"
+            android:label="Supplier" />
+        <activity
+            android:name=".addcustomer"
+            android:exported="false"
+            android:label="Customer" />
+        <activity
+            android:name=".sales_list"
+            android:exported="true"
+            android:label="Sales" />
+        <activity
+            android:name=".addsales"
+            android:exported="false"
+            android:label="Sales" />
+        <activity
+            android:name=".purchase_list"
+            android:exported="true"
+            android:label="Purchase" />
+        <activity
+            android:name=".addpurchase"
+            android:exported="true"
+            android:label="Purchase" />
+        <activity
+            android:name=".dashboard"
+            android:exported="false"
+            android:label="InventoPro" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".navDrawerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="true"
+            android:label="InventoPro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".product_list"
+            android:exported="true"
+            android:label="Product" />
+        <activity
+            android:name=".update_product"
+            android:exported="false" />
+        <activity
+            android:name=".addproduct"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="InventoPro" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+    </application>
+
+</manifest>

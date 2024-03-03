@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    tools:context=".managerdashboard">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg6">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/constraintLayout"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/productcard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="#E1C2b2"
+                    app:layout_constraintEnd_toStartOf="@+id/salescard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/constraintLayout">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/productimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintBottom_toTopOf="@+id/producttext"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productcard"
+                        app:srcCompat="@drawable/product" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/producttext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="30dp"
+                        android:text="PRODUCT"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productimage"
+                        app:layout_constraintBottom_toTopOf="@+id/productcard"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/salescard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="#E1C2b2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/productcard"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/salesimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/sales"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salescard"
+                        app:layout_constraintBottom_toTopOf="@+id/salestext"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/salestext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="50dp"
+                        android:text="SALES"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salesimage"
+                        app:layout_constraintBottom_toTopOf="@+id/salescard"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/purchasecard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="#AE806E"
+                    app:layout_constraintEnd_toStartOf="@+id/supplierCardView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/constraintLayout2">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/purchaseimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintBottom_toTopOf="@+id/purchasetext"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/purchasecard"
+                        app:srcCompat="@drawable/purchase" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/purchasetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/purchaseimage"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="PURCHASE"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/purchaseimage"
+                        app:layout_constraintBottom_toTopOf="@+id/purchasecard"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/supplierCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="#AE806E"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/purchasecard"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/supplierimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/supplier"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/supplierCardView"
+                        app:layout_constraintBottom_toTopOf="@+id/suppliertext"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/suppliertext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:text="SUPPLIER"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/supplierimage"
+                        app:layout_constraintBottom_toTopOf="@+id/supplierCardView"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/copyright"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/customerCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    app:cardBackgroundColor="#E1C2b2"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="181dp"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/customerimage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="75dp"
+                            app:layout_constraintBottom_toTopOf="@+id/customertext"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/customerCardView"
+                            app:srcCompat="@drawable/customer" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/customertext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CUSTOMER"
+                            android:textSize="24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/customerCardView"
+                            app:layout_constraintTop_toBottomOf="@+id/customerimage"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text=" @copyright/inventopro"
+                android:textColor="#737661"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <!-- NavigationView wrapped in a ScrollView for scrolling -->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu="@menu/nav_drawer_menu"
+            app:headerLayout="@layout/nav_header" />
+
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
