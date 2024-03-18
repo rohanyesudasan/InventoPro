@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
