@@ -8,7 +8,7 @@ public class PurchaseModel {
     private String Invoice_No;
     private String Supplier_ID;
     private String Product_ID;
-    private String Cost_Price;
+   private String Cost_Price;
     private String Amount;
 
 

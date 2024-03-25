@@ -54,7 +54,6 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.VideoView;
 
 import androidx.annotation.Nullable;

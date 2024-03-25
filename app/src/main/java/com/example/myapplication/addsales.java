@@ -1,21 +1,18 @@
 package com.example.myapplication;
 
-import android.app.ActionBar;
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.google.android.material.button.MaterialButton;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -23,13 +20,13 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class addsales extends Activity {
+public class addsales extends AppCompatActivity {
 
     private AutoCompleteTextView productSpinner;
     private AutoCompleteTextView cusname;
@@ -45,7 +42,6 @@ public class addsales extends Activity {
     private Map<String, String> customerNameToIdMap = new HashMap<>();
     private Map<String, String> productNameToIdMap = new HashMap<>();
     private ExecutorService executorService = Executors.newFixedThreadPool(2);
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,10 +61,6 @@ public class addsales extends Activity {
         fetchCustomerData(); // Fetch and populate supplier data
         fetchProductData(); // Fetch and populate product data
     }
-
-    private ActionBar getSupportActionBar() {
-    }
-
     //    private void populateSpinner(Spinner spinner, List<String> data) {
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
 //        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -293,6 +285,4 @@ public class addsales extends Activity {
         }
         return false;
     }
-
-
 }

@@ -26,7 +26,7 @@ public class dashboard extends navDrawerActivity {
         productcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this, addproduct.class);
+                Intent i = new Intent(dashboard.this, product_list.class);
                 startActivity(i);
                 finish();
             }
@@ -34,7 +34,7 @@ public class dashboard extends navDrawerActivity {
         purchasecard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this, addpurchase.class);
+                Intent i = new Intent(dashboard.this, purchase_list.class);
                 startActivity(i);
                 finish();
             }
@@ -42,7 +42,7 @@ public class dashboard extends navDrawerActivity {
         salescard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this, addsales.class);
+                Intent i = new Intent(dashboard.this, sales_list.class);
                 startActivity(i);
                 finish();
             }
@@ -50,7 +50,7 @@ public class dashboard extends navDrawerActivity {
         supplierCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this,addsupplier.class);
+                Intent i = new Intent(dashboard.this,Supplierlist.class);
                 startActivity(i);
                 finish();
             }
@@ -58,7 +58,7 @@ public class dashboard extends navDrawerActivity {
         customerCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this, addcustomer.class);
+                Intent i = new Intent(dashboard.this, customer_list.class);
                 startActivity(i);
                 finish();
             }

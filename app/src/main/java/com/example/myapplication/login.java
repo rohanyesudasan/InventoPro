@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -11,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -54,8 +56,8 @@ public class login extends AppCompatActivity {
             } else if ("Manager".equals(userType)) {
                 i = new Intent(this, managerdashboard.class);
             }
-            else if ("Staff".equals(userType)) {
-                i = new Intent(this, staffdashboard.class);
+                else if ("Staff".equals(userType)) {
+                    i = new Intent(this, staffdashboard.class);
             }else {
 //                // If user type is not "Admin" or "Manager," you can handle it as needed
 //                // For example, you can show a message or redirect to a default activity
@@ -151,7 +153,7 @@ public class login extends AppCompatActivity {
         }
     }
 
-    private void saveLoginInfo(String Email, String Password, String Username, String UserType) {
+        private void saveLoginInfo(String Email, String Password, String Username, String UserType) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("email", Email);
         editor.putString("password", Password);

@@ -1,13 +1,13 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.content.Intent;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -21,48 +21,48 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class customer_list extends AppCompatActivity {
+public class Supplierlist extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<CustomerModel> customerList = new ArrayList<>();
-    private CustomerAdapter customerAdapter;
+    private List<SupplierModel> SupplierList = new ArrayList<>();
+    private SupplierAdapter SupplierAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_list);
+        setContentView(R.layout.activity_supplierlist);
 
         recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        customerAdapter = new CustomerAdapter(customerList);
-        recyclerView.setAdapter(customerAdapter);
+        SupplierAdapter = new SupplierAdapter(SupplierList);
+        recyclerView.setAdapter(SupplierAdapter);
 
-        // Fetch customer data from the server and populate the customerList
+        // Fetch supplier data from the server and populate the supplierList
         fetchDataFromServer(); // Corrected function name
 
-        FloatingActionButton addCustomerButton = findViewById(R.id.addCustomerButton);
-        addCustomerButton.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton addSupplierButton = findViewById(R.id.addSupplierButton);
+        addSupplierButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Open the activity to add a new customer
-                Intent intent = new Intent(customer_list.this, addcustomer.class);
+                Intent intent = new Intent(Supplierlist.this, addsupplier.class);
                 startActivity(intent);
             }
         });
     }
 
     private void fetchDataFromServer() {
-        new FetchCustomerTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        new FetchSupplierTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
-    private class FetchCustomerTask extends AsyncTask<Void, Void, List<CustomerModel>>{
+    private class FetchSupplierTask extends AsyncTask<Void, Void, List<SupplierModel>>{
         @Override
-        protected List<CustomerModel> doInBackground(Void... voids) {
-            List<CustomerModel> customerList = new ArrayList<>();
+        protected List<SupplierModel> doInBackground(Void... voids) {
+            List<SupplierModel> SupplierList = new ArrayList<>();
 
             try {
-                URL url = new URL("http://172.30.0.1:8084/trial/Customer");
+                URL url = new URL("http://172.30.0.1:8084/trial/Supplier");
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
 
@@ -76,9 +76,9 @@ public class customer_list extends AppCompatActivity {
 
                     JSONArray jsonArray = new JSONArray(responseBuilder.toString());
                     for (int i = 0; i < jsonArray.length(); i++) {
-                        JSONObject customerJson = jsonArray.getJSONObject(i);
-                        CustomerModel customer = new CustomerModel(customerJson);
-                        customerList.add(customer);
+                        JSONObject supplierJson = jsonArray.getJSONObject(i);
+                        SupplierModel supplier = new SupplierModel(supplierJson);
+                        SupplierList.add(supplier);
                     }
                 } else {
                     throw new RuntimeException("HTTP response code: " + connection.getResponseCode());
@@ -87,13 +87,13 @@ public class customer_list extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            return customerList;
+            return SupplierList;
         }
 
         @Override
-        protected void onPostExecute(List<CustomerModel> customerList) {
-            super.onPostExecute(customerList);
-            customerAdapter.setCustomer(customerList);
+        protected void onPostExecute(List<SupplierModel> SupplierList) {
+            super.onPostExecute(SupplierList);
+            SupplierAdapter.setSupplier(SupplierList);
         }
     }
 }

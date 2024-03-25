@@ -13,7 +13,6 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 
-
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
     private List<ProductModel> productList;
 

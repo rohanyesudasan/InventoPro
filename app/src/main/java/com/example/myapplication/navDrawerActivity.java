@@ -3,9 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -67,7 +65,7 @@ public class navDrawerActivity extends AppCompatActivity {
 
             case R.id.menuPurchaseView:
                 // Toast.makeText(this, "View Purchase", Toast.LENGTH_SHORT).show();
-                Intent a = new Intent(navDrawerActivity.this, addpurchase.class);
+                Intent a = new Intent(navDrawerActivity.this, purchase_list.class);
                 startActivity(a);
 
                 return true;
@@ -80,7 +78,7 @@ public class navDrawerActivity extends AppCompatActivity {
                 return true;
 
             case R.id.menuSalesView:
-                Intent h = new Intent(navDrawerActivity.this, addsales.class);
+                Intent h = new Intent(navDrawerActivity.this, sales_list.class);
                 startActivity(h);
 
                 // Toast.makeText(this, "View Sales", Toast.LENGTH_SHORT).show();
@@ -94,7 +92,7 @@ public class navDrawerActivity extends AppCompatActivity {
                 return true;
 
             case R.id.menuCustomersView:
-                Intent s = new Intent(navDrawerActivity.this, addcustomer.class);
+                Intent s = new Intent(navDrawerActivity.this, customer_list.class);
                 startActivity(s);
 //
                 return true;
@@ -107,7 +105,7 @@ public class navDrawerActivity extends AppCompatActivity {
                 return true;
 
             case R.id.menuSupplierView:
-                Intent c = new Intent(navDrawerActivity.this, addsupplier.class);
+                Intent c = new Intent(navDrawerActivity.this, Supplierlist.class);
                 startActivity(c);
 
                 return true;
